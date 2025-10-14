@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant light (&:is(.light *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --text-6\.4xl: 4rem; /* 64px */
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --color-gray-0: var(--gray-0);
+  --color-gray-2: var(--gray-2);
+  --color-gray-3: var(--gray-3);
+  --color-gray-4: var(--gray-4);
+  --color-gray-5: var(--gray-5);
+  --color-gray-6: var(--gray-6);
+  --color-gray-7: var(--gray-7);
+  --color-green-5: var(--green-5);
+  --color-green-7: var(--green-7);
+  --spacing-115: 28.75rem; /* 460px */
+  --spacing-128: 32rem; /* 512px */
+  --spacing-18: 4.5rem; /* 72px */
+  --spacing-37\.5: 9.375rem; /* 150px */
+  --spacing-50: 12.5rem; /* 200px */
+  --spacing-21\.75: 5.4375rem; /* 87px */
+  --border-width-0\.75: 0.046875rem; /* 0.75px */
+}
+
+:root {
+  --radius: 0.625rem;
+  --background-secondary: oklch(0.2393 0 0);
+  --background: oklch(0.2393 0 0);
+  --foreground: oklch(0.9067 0 0);
+  --card: oklch(0.1957 0 0 / 80%);
+  --card-foreground: oklch(0.9067 0 0);
+  --popover: oklch(0.1957 0 0 / 80%);
+  --popover-foreground: oklch(0.9067 0 0);
+  --primary: oklch(0.5876 0.0659 161.24);
+  --primary-foreground: oklch(0.985 0.002 247.839);
+  --secondary: oklch(0.3562 0 0);
+  --secondary-foreground: oklch(0.21 0.034 264.665);
+  --muted: oklch(0.3562 0 0);
+  --muted-foreground: oklch(0.551 0.027 264.364);
+  --accent: oklch(0.3562 0 0);
+  --accent-foreground: oklch(0.21 0.034 264.665);
+  --destructive: oklch(0.577 0.245 27.325);
+  --success: oklch(0.7663 0.0958 169.38);
+  --error: oklch(0.7321 0.1649 20.66);
+  --gray-0: oklch(0.2134 0 0);
+  --gray-2: oklch(0.2393 0 0);
+  --gray-3: oklch(0.2809 0 0);
+  --gray-4: oklch(0.3562 0 0);
+  --gray-5: oklch(0.6993 0 0);
+  --gray-6: oklch(0.7984 0 0);
+  --gray-7: oklch(0.9067 0 0);
+  --green-5: oklch(0.6762 0.0747 164.24);
+  --green-7: oklch(0.5876 0.0659 161.24);
+}
+
+.light {
+  --background: oklch(0.9702 0 0);
+  --foreground: oklch(0.5624 0 0);
+  --card: oklch(0.21 0.034 264.665);
+  --card-foreground: oklch(0.5624 0 0);
+  --popover: oklch(0.21 0.034 264.665);
+  --popover-foreground: oklch(0.5624 0 0);
+  --primary: oklch(0.5876 0.0659 161.24);
+  --primary-foreground: oklch(0.21 0.034 264.665);
+  --secondary: oklch(0.278 0.033 256.848);
+  --secondary-foreground: oklch(0.5624 0 0);
+  --muted: oklch(0.278 0.033 256.848);
+  --muted-foreground: oklch(0.707 0.022 261.325);
+  --accent: oklch(0.278 0.033 256.848);
+  --accent-foreground: oklch(0.5624 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --success: oklch(0.7663 0.0958 169.38);
+  --error: oklch(0.7321 0.1649 20.66);
+  --gray-0: oklch(0.2134 0 0);
+  --gray-2: oklch(0.2393 0 0);
+  --gray-3: oklch(0.2809 0 0);
+  --gray-4: oklch(0.3562 0 0);
+  --gray-5: oklch(0.6993 0 0);
+  --gray-6: oklch(0.7984 0 0);
+  --gray-7: oklch(0.9067 0 0);
+  --green-5: oklch(0.6762 0.0747 164.24);
+  --green-7: oklch(0.5876 0.0659 161.24);
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: 0px 0px 9.4px 0px #0000000d;
+  }
+
+  .shadow-item-menu {
+    box-shadow: 0px 10px 10px 0px #0000000d;
+  }
+}

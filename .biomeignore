@@ -1,0 +1,10 @@
+# Ignorar pastas internas e de build
+
+.idea/
+.next/
+node_modules/
+.husky/
+dist/
+coverage/
+out/
+tmp/
