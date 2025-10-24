@@ -6,5 +6,4 @@ export type LoginFormData = z.infer<typeof loginSchema>;
 
 export interface LoginResponse {
   data: User;
-  token: string;
 }

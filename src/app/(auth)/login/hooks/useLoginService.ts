@@ -17,9 +17,18 @@ export function useLoginService() {
    *
    * @returns {RequestInstance<LoginFormData>} Instância da requisição que pode ser disparada via `.send(data)`.
    */
-  const login = useRequest((data: LoginFormData) => post<LoginResponse>("/auth/login", data), {
-    immediate: false,
-  });
+  const login = useRequest(
+    (data: LoginFormData) =>
+      post<LoginResponse>("/auth/login", data, {
+        meta: {
+          skipAuth: true,
+          skipRedirectOnAuthError: true,
+        },
+      }),
+    {
+      immediate: false,
+    }
+  );
 
   return {
     login,
