@@ -13,7 +13,7 @@ if (apiUrl) {
   }
 }
 
-const connectSources = ["'self'"];
+const connectSources = ["*"];
 
 if (apiOrigin) {
   connectSources.push(apiOrigin);
@@ -23,14 +23,14 @@ const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';
   form-action 'self';
-  frame-ancestors 'none';
-  object-src 'none';
-  script-src 'self';
-  style-src 'self';
-  img-src 'self' data:;
+  frame-ancestors 'self';
+  object-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval';
+  style-src 'self' 'unsafe-inline';
+  img-src * blob: data:;
   font-src 'self';
   connect-src ${connectSources.join(" ")};
-  frame-src 'none';
+  frame-src 'self';
   media-src 'none';
   upgrade-insecure-requests;
 `;
@@ -46,7 +46,7 @@ const securityHeaders = [
   },
   {
     key: "X-Frame-Options",
-    value: "DENY",
+    value: "SAMEORIGIN",
   },
   {
     key: "X-Content-Type-Options",

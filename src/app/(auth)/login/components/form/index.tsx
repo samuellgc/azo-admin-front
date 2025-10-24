@@ -1,12 +1,7 @@
 "use client";
 
 import { Button } from "@/shared/components/shadcn/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-} from "@/shared/components/shadcn/ui/form";
+import { Form, FormControl, FormField, FormItem } from "@/shared/components/shadcn/ui/form";
 import { useLoginForm } from "@/app/(auth)/login/hooks/useLogin";
 import { InputCpf } from "@/shared/components/ui/inputs/input-cpf";
 import { InputPassword } from "@/shared/components/ui/inputs/input-password";
@@ -26,9 +21,12 @@ export default function LoginForm() {
   const { form, onSubmit, loading } = useLoginForm();
 
   return (
-    <Card className="rounded-sm p-6 w-full max-w-96 h-115 shadow-lg">
+    <Card className="rounded-sm p-6 w-full justify-center max-w-96 h-115 shadow-lg">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-6"
+        >
           <FormField
             control={form.control}
             name="cpf"
@@ -77,7 +75,10 @@ export default function LoginForm() {
             )}
           />
 
-          <Button disabled={loading} type="submit">
+          <Button
+            disabled={loading}
+            type="submit"
+          >
             Entrar
           </Button>
         </form>
